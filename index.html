@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes réseaux</title>
+    <!-- Chargement des icônes via FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+    body {
+        background: linear-gradient(135deg, #0f172a, #1e293b);
+        color: #ffffff;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 480px;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 30px;
+        border-radius: 20px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .profile-img {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #38bdf8;
+        margin-bottom: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+        color: #f8fafc;
+    }
+
+    p.bio {
+        font-size: 0.95rem;
+        color: #94a3b8;
+        margin-bottom: 25px;
+        line-height: 1.4;
+    }
+
+    .links-container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .link-card {
+        display: flex;
+        align-items: center;
+        padding: 14px 20px;
+        background: rgba(255, 255, 255, 0.08);
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 12px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        border: 1px solid transparent;
+    }
+
+    .link-card i {
+        font-size: 1.4rem;
+        width: 30px;
+        margin-right: 12px;
+    }
+
+    .link-card span {
+        flex-grow: 1;
+        text-align: center;
+        margin-right: 30px; /* Aligne le texte au centre en compensant l'icône */
+    }
+
+    /* Effets au survol */
+    .link-card:hover {
+        transform: translateY(-3px);
+        background: rgba(255, 255, 255, 0.15);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Couleurs personnalisées au survol */
+    .website:hover { border-color: #38bdf8; color: #38bdf8; }
+    .github:hover { border-color: #2ea44f; color: #2ea44f; }
+    .instagram:hover { border-color: #e1306c; color: #e1306c; }
+    .tiktok:hover { border-color: #00f2fe; color: #00f2fe; }
+    .facebook:hover { border-color: #1877f2; color: #1877f2; }
+
+    footer {
+        margin-top: 25px;
+        font-size: 0.8rem;
+        color: #64748b;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <!-- photo de profil.jpg.png -->
+    <img src="photo de profil.jpg.png" alt="photo de profil de [luffycarpfishing]" class="profile-img">
+
+    <!-- Nom et Bio -->
+    <h1>Luffy Carp Fishing</h1>
+    <p class="bio">🚀 Pêcheur de carpe passionné<br>Bienvenue sur mes réseaux !</p>
+
+    <!-- Liste des Liens -->
+    <div class="links-container">
+        
+        <!-- Mon partenaire pour les appâts:KarpX,pour les cannes,moulinets et terminal tackle et batteries: Kaptur,pour les vêtements: Koma Clothing-->
+        <a href="https://www.karpx.com" target="_blank" class="link-card website">
+            <i class="fa-solid fa-globe"></i>
+            <span>Mon partenaire pour tous le matériel pour la carpe:
+                
+                KarpX, KaptuR et Koma Clothing
+            </span>
+        </a>
+
+        <!-- Lien Instagram -->
+        <a href="https://instagram.com/luffy_carpfishing92" target="_blank" class="link-card instagram">
+            <i class="fa-brands fa-instagram"></i>
+            <span>Instagram</span>
+        </a>
+
+        <!-- Lien TikTok -->
+        <a href="https://tiktok.com/@luffycarpfishing" target="_blank" class="link-card tiktok">
+            <i class="fa-brands fa-tiktok"></i>
+            <span>TikTok</span>
+        </a>
+
+        <!-- Lien Facebook -->
+        <a href="https://facebook.com/Luffy Carp Fishing" target="_blank" class="link-card facebook">
+            <i class="fa-brands fa-facebook"></i>
+            <span>Facebook</span>
+        </a>
+
+    </div>
+
+    <footer>
+        © 2026 Tous droits réservés
+    </footer>
+</div>
+</body>
+</html>
