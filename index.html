@@ -123,62 +123,68 @@
         color: #64748b;
     }
     
-    /* 1. Structure du bouton site Web */
-.link-card.website {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 14px 20px;
-    text-decoration: none;
-    border-radius: 14px;
-    font-weight: 600;
-    overflow: hidden;
-    z-index: 1;
-    border: none !important;
-    transition: transform 0.3s ease;
-}
+            /* ... tes styles précédents (ex: .container, .profile-img, etc.) ... */
 
-/* 2. Le dégradé NOIR qui tourne en arrière-plan */
-.link-card.website::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    /* Dégradé noir intense avec du gris foncé pour voir le mouvement tournant */
-    background: conic-gradient(
-        #000000, 
-        #434343, 
-        #000000, 
-        #1a1a1a, 
-        #000000
-    );
-    z-index: -2;
-    animation: rotate-border 4s linear infinite;
-}
+        footer {
+            margin-top: 25px;
+            font-size: 0.8rem;
+            color: #64748b;
+        }
 
-/* 3. Le masque intérieur (pour laisser apparaître seulement le contour noir) */
-.link-card.website::after {
-    content: '';
-    position: absolute;
-    inset: 2.5px; /* Épaisseur du contour */
-    background: #f8f3e6; /* Couleur fond crème/sable du bouton */
-    border-radius: 12px;
-    z-index: -1;
-}
+        .link-card.website {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            border-radius: 14px;
+            font-weight: 600;
+            overflow: hidden;
+            z-index: 1;
+            border: none !important;
+            transition: transform 0.3s ease;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.8), 0 0 5px #000000;
+        }
 
-/* 4. Animation de rotation */
-@keyframes rotate-border {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-</style>
+        .link-card.website i,
+        .link-card.website span {
+            color: #000000 !important;
+        }
+
+        .link-card.website::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(
+                #000000, 
+                #ffffff, 
+                #000000, 
+                #333333, 
+                #000000
+            );
+            z-index: -2;
+            animation: rotate-border 3s linear infinite;
+        }
+
+        .link-card.website::after {
+            content: '';
+            position: absolute;
+            inset: 3px;
+            background: #f8f3e6 !important;
+            border-radius: 11px;
+            z-index: -1;
+        }
+
+        @keyframes rotate-border {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+    </style>
 </head>
 
 <div class="container">
