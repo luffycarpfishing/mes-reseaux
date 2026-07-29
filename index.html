@@ -296,6 +296,64 @@
     z-index: -1;
 }
 
+/* 1. Structure du bouton Facebook */
+.link-card.facebook {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    border-radius: 14px;
+    font-weight: 600;
+    overflow: hidden;
+    z-index: 1;
+    border: none !important;
+    transition: transform 0.3s ease;
+    /* Halo lumineux bleu Facebook autour du bouton */
+    box-shadow: 0 0 12px rgba(24, 119, 242, 0.6), 0 0 4px #1877f2;
+}
+
+/* 2. Le logo (icône Facebook) en BLEU FACEBOOK */
+.link-card.facebook i {
+    color: #1877f2 !important; /* Couleur bleu officiel Facebook */
+}
+
+/* 3. Le texte en NOIR */
+.link-card.facebook span {
+    color: #000000 !important;
+}
+
+/* 4. La bordure BLEU FACEBOOK qui tourne */
+.link-card.facebook::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    /* Dégradé de teintes bleu Facebook / bleu roi */
+    background: conic-gradient(
+        #1877f2, 
+        #4267b2, 
+        #0055ff, 
+        #1877f2
+    );
+    z-index: -2;
+    animation: rotate-border 3s linear infinite;
+}
+
+/* 5. Le fond intérieur du bouton en COULEUR SABLE */
+.link-card.facebook::after {
+    content: '';
+    position: absolute;
+    inset: 3px;
+    background: #E8D8B7 !important; /* Couleur sable */
+    border-radius: 11px;
+    z-index: -1;
+}
+
+
 
     </style>
 </head>
