@@ -183,6 +183,61 @@
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
+        
+        /* 1. Structure du bouton Instagram */
+.link-card.instagram {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    border-radius: 14px;
+    font-weight: 600;
+    overflow: hidden;
+    z-index: 1;
+    border: none !important;
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 12px rgba(255, 0, 128, 0.5), 0 0 4px #ff007f;
+}
+
+/* 2. Le logo (icône) en ROSE NÉON */
+.link-card.instagram i {
+    color: #ff007f !important; /* Rose néon vif pour le logo */
+}
+
+/* 3. Le texte en NOIR */
+.link-card.instagram span {
+    color: #000000 !important; /* Couleur noire pour l'écriture */
+}
+
+/* 4. La bordure ROSE NÉON qui tourne */
+.link-card.instagram::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+        #ff007f, 
+        #ff66c4, 
+        #7928ca, 
+        #ff007f
+    );
+    z-index: -2;
+    animation: rotate-border 3s linear infinite;
+}
+
+/* 5. Le fond intérieur du bouton en COULEUR SABLE */
+.link-card.instagram::after {
+    content: '';
+    position: absolute;
+    inset: 3px;
+    background: #E8D8B7 !important; /* Couleur sable */
+    border-radius: 11px;
+    z-index: -1;
+}
 
     </style>
 </head>
