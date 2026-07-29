@@ -239,6 +239,64 @@
     z-index: -1;
 }
 
+/* 1. Structure du bouton TikTok */
+.link-card.tiktok {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    border-radius: 14px;
+    font-weight: 600;
+    overflow: hidden;
+    z-index: 1;
+    border: none !important;
+    transition: transform 0.3s ease;
+    /* Halo lumineux bleu ciel néon autour du bouton */
+    box-shadow: 0 0 12px rgba(0, 242, 254, 0.6), 0 0 4px #00f2fe;
+}
+
+/* 2. Le logo (icône TikTok) en BLEU CIEL NÉON */
+.link-card.tiktok i {
+    color: #00f2fe !important; /* Bleu ciel néon très lumineux */
+}
+
+/* 3. Le texte en NOIR */
+.link-card.tiktok span {
+    color: #000000 !important; /* Texte bien lisible */
+}
+
+/* 4. La bordure BLEU CIEL NÉON qui tourne */
+.link-card.tiktok::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    /* Dégradé bleu ciel / cyan / bleu vif */
+    background: conic-gradient(
+        #00f2fe, 
+        #4facfe, 
+        #00c6ff, 
+        #00f2fe
+    );
+    z-index: -2;
+    animation: rotate-border 3s linear infinite;
+}
+
+/* 5. Le fond intérieur du bouton en COULEUR SABLE */
+.link-card.tiktok::after {
+    content: '';
+    position: absolute;
+    inset: 3px;
+    background: #E8D8B7 !important; /* Couleur sable */
+    border-radius: 11px;
+    z-index: -1;
+}
+
+
     </style>
 </head>
 
